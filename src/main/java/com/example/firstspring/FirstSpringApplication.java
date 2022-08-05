@@ -9,6 +9,11 @@ import java.sql.Connection;
 public class FirstSpringApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FirstSpringApplication.class, args);
+
+        SpringApplication application = new SpringApplication(FirstSpringApplication.class);
+        application.setAdditionalProfiles(args[0]); //profile property
+        System.getProperties().setProperty("server.port", args[1]);
+
+        application.run(args);
     }
 }
