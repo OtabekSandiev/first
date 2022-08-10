@@ -7,6 +7,12 @@ import java.util.List;
 
 public interface StudentService {
 
+    /**
+     * Add new Student to list
+     * @param studentDto Info about student
+     * @return ResponseDto - code -1 when exception occurs, 0 when all is OK.
+     */
+
     ResponseDto addStudent (StudentDto studentDto);
 
     List<StudentDto> getAll();

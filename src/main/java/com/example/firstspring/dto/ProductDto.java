@@ -5,15 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class ResponseDto<T> {
+public class ProductDto {
 
-    private int code;
-    private boolean success;
-    private String message;
-    private T data;
+    private Integer id;
+    private String name;
+    private ProductTypeDto type;
+    private Integer amount;
+    private Double price;
 
 }
