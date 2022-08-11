@@ -5,6 +5,7 @@ import com.example.firstspring.dto.ResponseDto;
 import com.example.firstspring.entity.ProductTypes;
 import com.example.firstspring.repository.ProductTypesRepository;
 import com.example.firstspring.service.ProductTypesService;
+import com.example.firstspring.service.mapper.ProductMapper;
 import com.example.firstspring.service.mapper.ProductTypesMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,10 +15,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class ProductTypesServiceImp implements ProductTypesService {
+public class ProductTypesServiceImpl implements ProductTypesService {
 
     private final ProductTypesRepository repository;
     private final ProductTypesMapper mapper;
@@ -40,7 +42,7 @@ public class ProductTypesServiceImp implements ProductTypesService {
                 .map(mapper::toDto)
                 .collect(Collectors.toList());
 
-        return ResponseDto.<List<ProductTypeDto>>builder().message("OK").success(true).data(productTypeDto).build();
+        return new ResponseDto<>(0,true,"OK",productTypeDto);
     }
 
     @Override

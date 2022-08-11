@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ProductTypeDto {
+public class   ProductTypeDto {
 
     private Integer id;
     private String name;

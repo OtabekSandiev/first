@@ -37,6 +37,7 @@ public class Product {
     private String name;
 
     @ManyToOne
+    @JoinColumn(name = "typeid", referencedColumnName = "id")
     private ProductTypes type;
 
     @Column(name = "amount")

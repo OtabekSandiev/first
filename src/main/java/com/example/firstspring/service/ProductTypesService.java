@@ -9,7 +9,7 @@ public interface ProductTypesService {
 
     ResponseDto<String> addProduct(ProductTypeDto dto);
 
-    ResponseDto<List<ProductTypeDto>> getAll();
+    abstract ResponseDto<List<ProductTypeDto>> getAll();
 
     ResponseDto<ProductTypeDto> getOne(Integer id);
 }

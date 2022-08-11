@@ -25,16 +25,16 @@ public class StringHelper {
         return StringUtils.capitalize(s);
     }
 
-    public String dateToString(Date date){
+    public String dateToString(String date){
         //dd-mm-yyyy
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         return dateFormat.format(date);
     }
 
-    public Date parseToDate(String s){
+    public String parseToDate(String s){
         DateFormat format = new SimpleDateFormat("dd-MM-yyyy");
         try {
-            return format.parse(s);
+            return String.valueOf(format.parse(s));
         } catch (ParseException e) {
             e.printStackTrace();
             return null;

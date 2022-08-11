@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class PeopleServiceImpl {
 
-//    @Autowired
-//    private StudentDto studentDto;
-//
-//    public ResponseDto<StudentDto> std (String name){
-//        studentDto.setName(name);
-//        return ResponseDto.<StudentDto>builder().message("Ok").success(true).data(studentDto).build();
-//    }
+    @Autowired
+    private StudentDto studentDto;
+
+    public ResponseDto<StudentDto> std (String name){
+        studentDto.setName(name);
+        return ResponseDto.<StudentDto>builder().message("Ok").success(true).data(studentDto).build();
+    }
 }
